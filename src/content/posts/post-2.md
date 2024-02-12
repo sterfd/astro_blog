@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: My Second Blog Post
 author: Stef
 pubDate: 2022-08-01
