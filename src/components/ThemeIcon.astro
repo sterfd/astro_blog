@@ -21,9 +21,15 @@
     #themeToggle {
         border: 0;
         background: none;
+        position: fixed; /* or absolute, depending on your requirements */
+        top: 10px; /* Adjust the distance from the top edge of the viewport */
+        right: 10px; /* Adjust the distance from the right edge of the viewport */
+        border: 0;
+        background: none;
+        z-index: 9999; /* Ensure it's above other elements */
     }
     .sun {
-        fill: black;
+        fill: #f8c14a;
     }
     .moon {
         fill: transparent;
@@ -33,7 +39,7 @@
         fill: transparent;
     }
     :global(.dark) .moon {
-        fill: white;
+        fill: #f3e7a9;
     }
 </style>
 

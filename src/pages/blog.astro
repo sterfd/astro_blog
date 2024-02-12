@@ -4,9 +4,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = await getCollection("posts");
 const pageTitle = "My Astro Learning Blog";
+const headerID = "blog-title";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} header={headerID}>
     <p>This is where I will post about my journey learning Astro</p>
     <ul>
         {

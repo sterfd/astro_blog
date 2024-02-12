@@ -1,11 +1,12 @@
 html {
-    background-color: #f1f5f9;
+    background-color: #EBEFEF;
     font-family: sans-serif;
+    color: #383B36;
 }
 
 html.dark {
-    background-color: #0d0950;
-    color: #fff;
+    background-color: #2B3132;
+    color: #EEECE3;
 }
 
 .dark .nav-links a {
@@ -41,14 +42,27 @@ h1 {
     width: 40px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #ff9776;
+    background-color: #9CC0BD;
 }
+
+.dark .hamburger .line {
+    background-color: #9CC0BD;
+}
+
+
+#name-logo {
+    text-align: center;
+    font-size: 3rem;
+    color: #F28377;
+
+}
+
+
 
 .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #ff9776;
     display: none;
     margin: 0;
 }
@@ -60,13 +74,60 @@ h1 {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    text-transform: uppercase;
+    color: #383B36;
+    border-radius: 2px;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color: #ff9776;
+.nav-links a:hover {
+    transform: scale(1.1);
+    /* Enlarge the text by 1.2x when hovered */
 }
+
+#home-button:hover,
+#home-button:focus {
+    background-color: #6ABFD8;
+}
+
+#home-title {
+    color: #6ABFD8;
+}
+
+#about-button:hover,
+#about-button:focus {
+    background-color: #EE9BB5;
+}
+
+#about-title {
+    color: #EE9BB5;
+}
+
+#blog-button:hover,
+#blog-button:focus {
+    background-color: #EFB656;
+}
+
+#blog-title {
+    color: #EFB656;
+}
+
+#tags-button:hover,
+#tags-button:focus {
+    background-color: #B6D1CD;
+}
+
+#tags-title {
+    color: #B6D1CD;
+}
+
+#projects-button:hover,
+#projects-button:focus {
+    background-color: #DC766C;
+}
+
+#projects-title {
+    color: #DC766C;
+}
+
 
 .expanded {
     display: unset;

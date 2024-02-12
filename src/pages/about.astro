@@ -19,6 +19,8 @@ const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
+
+const headerID = "about-title";
 ---
 
 <style define:vars={{ skillColor, fontWeight, textCase }}>
@@ -33,7 +35,7 @@ const textCase = "uppercase";
     }
 </style>
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} header={headerID}>
     <h2>... and my new Astro site!</h2>
 
     <p>

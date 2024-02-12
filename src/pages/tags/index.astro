@@ -4,9 +4,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const allPosts = await getCollection("posts");
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 const pageTitle = "Tag Index";
+const headerID = "tags-title";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} header={headerID}>
     <div class="tags">
         {
             tags.map((tag) => (
