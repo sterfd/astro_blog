@@ -5,7 +5,56 @@ const pageTitle = "Home Page";
 const headerID = "home-title";
 ---
 
+<style>
+	a {
+		text-decoration: underline;
+	}
+</style>
 <BaseLayout pageTitle={pageTitle} header={headerID}>
-	<!-- <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />       no client:load and jsx doesnt send/rerun jsx on client when page loads-->
-	<!-- <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} /> -->
+	<p>
+		Hello! My name is Stephanie Nakamata and I'm an aspiring software
+		developer. I'm currently at the <a href="https://www.recurse.com"
+			>Recurse Center</a
+		> for a 12 week batch, learning about ML, backend systems, cryptography,
+		web security, and more!
+	</p>
+	<p>
+		Here, you'll find a collection of things resliting from coding:
+		thoughts, projects, details of my transformation?!
+	</p>
+
+	<h2>Latest Blog Posts</h2>
+	<!-- latest blog posts -->
+
+	<h2>Project Overview</h2>
+	<!-- project overview -->
+
+	<h2>List of Things I'm Working On</h2>
+	<ul>
+		<li>How to use Astro by building this website :P</li>
+		<li>A cute computer vision project</li>
+		<li>
+			Machine learning fundamentals with <a
+				href="https://karpathy.ai/zero-to-hero.html"
+			>
+				Karpathy's Neural Networks: Zero to Hero</a
+			> series
+		</li>
+		<li>
+			Learning about microservice architecture by building a video
+			streaming application
+		</li>
+		<li>
+			<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set 2,
+			Challenge 16
+		</li>
+		<li>A data analysis and visualization project</li>
+		<li>
+			Learning about web security on <a
+				href="https://portswigger.net/web-security/learning-paths"
+				>Port Swigger</a
+			>
+		</li>
+		<li>Getting better at blogging</li>
+	</ul>
 </BaseLayout>

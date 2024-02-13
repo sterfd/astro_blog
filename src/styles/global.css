@@ -1,7 +1,10 @@
 html {
-    background-color: #EBEFEF;
+    background-color: #F7F4EB;
     font-family: sans-serif;
     color: #383B36;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 html.dark {
@@ -10,15 +13,21 @@ html.dark {
 }
 
 .dark .nav-links a {
-    color: #fff;
+    color: #EBEFEF;
 }
 
 body {
     margin: 0 auto;
     width: 100%;
-    max-width: 80ch;
+    max-width: 85ch;
     padding: 1rem;
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 * {
@@ -28,6 +37,15 @@ body {
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+}
+
+a {
+    color: #383B36;
+    text-decoration: none;
+}
+
+.dark a {
+    color: #EBEFEF;
 }
 
 /* nav styles */
@@ -54,9 +72,7 @@ h1 {
     text-align: center;
     font-size: 3rem;
     color: #F28377;
-
 }
-
 
 
 .nav-links {
