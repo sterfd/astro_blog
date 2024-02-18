@@ -13,12 +13,13 @@ const { pageTitle, header } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <ViewTransitions />
+        <!-- <ViewTransitions /> -->
     </head>
     <body>
         <Header />
         <main>
-            <h1 id={header} transition:animate="slide">{pageTitle}</h1>
+            <h1 id={header}>{pageTitle}</h1>
+            <!-- <h1 id={header} transition:animate="slide">{pageTitle}</h1> -->
             <slot />
             <Footer />
             <script>
