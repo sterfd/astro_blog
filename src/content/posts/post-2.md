@@ -1,5 +1,5 @@
 ---
-title: My Second Blog Post
+title: Why is using Zoom so hard am I a boomer?
 author: Stef
 pubDate: 2022-08-01
 description: "After learning some Astro, I couldn't stop!"

@@ -1,4 +1,8 @@
 ---
+import type {
+    isTransitionBeforePreparationEvent,
+    isTransitionBeforeSwapEvent,
+} from "astro:transitions/client";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
@@ -12,65 +16,32 @@ const identity = {
 
 const skills = ["Python", "React", "Node", "HTML/CSS"];
 
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
-
 const headerID = "about-title";
 ---
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
-    h1 {
-        color: purple;
-        font-size: 4rem;
-    }
-    .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-    }
-</style>
-
 <BaseLayout pageTitle={pageTitle} header={headerID}>
-    <h2>... and my new Astro site!</h2>
+    <p>
+        My name is Stephanie! I used to be a scientist, but I've fallen in love
+        with programming, and trying to learn as much as I can about it! I'm a
+        pretty strong Python programmer, and I enjoy making things (web
+        development), playing with things (datasets, CV), and breaking things
+        (cryptography, CTF).
+    </p>
+    <p>
+        The layout of this website will probably be updated pretty frequently
+        since I get pretty obsessed with shiny things like this and playing
+        around with them. Hopefully that's not the case so I can write and
+        reflect more about the things I'm learning.
+    </p>
+    <p>
+        This is also a reminder to myself to put up some tutorials for my future
+        self. Sometimes I learn how to use a nifty tool, and I'll forget
+        everything about it, including its name, the next time I need it ;A;
+    </p>
 
     <p>
-        I am working thorugh Astro's intro tutoria. this is the 2nd page and I
-        built it!
+        I hope I can inject my personality into this and it'll evolve as a space
+        where I can put some cool links, thoughts, and experiments down. So it's
+        not just a <i>please look at how skilled and employable i am</i> sorta thing...
     </p>
-    <p>This site will update as I complete more tutorial</p>
-    <p>Here are a few facts about me:</p>
-    <ul>
-        <li>My name is {identity.firstName}</li>
-        <li>
-            I live in {identity.country} and trying to get a job as a {
-                identity.occupation
-            }
-        </li>
-        {
-            identity.hobbies.length >= 2 && (
-                <li>
-                    Two of my hobbies are: {identity.hobbies[0]} and{" "}
-                    {identity.hobbies[1]}
-                </li>
-            )
-        }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-        {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-    {finished && <p>I finished this tutorial!</p>}
-    {
-        goal === 3 ? (
-            <p>My goal is to finish in 3 days!</p>
-        ) : (
-            <p>My goal is not 3 days.</p>
-        )
-    }
 </BaseLayout>

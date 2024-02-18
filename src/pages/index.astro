@@ -1,6 +1,9 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 // import Greeting from "../components/Greeting";
+const allPosts = await getCollection("posts");
 const pageTitle = "Home Page";
 const headerID = "home-title";
 ---
@@ -8,6 +11,9 @@ const headerID = "home-title";
 <style>
 	a {
 		text-decoration: underline;
+	}
+	p {
+		/* text-align: justify; */
 	}
 </style>
 <BaseLayout pageTitle={pageTitle} header={headerID}>
@@ -19,15 +25,29 @@ const headerID = "home-title";
 		web security, and more!
 	</p>
 	<p>
-		Here, you'll find a collection of things resliting from coding:
+		Here, you'll find a collection of things resulting from coding:
 		thoughts, projects, details of my transformation?!
 	</p>
 
 	<h2>Latest Blog Posts</h2>
-	<!-- latest blog posts -->
-
+	<!-- slice -5 and reverse for hte latest blog posts -->
+	<!-- blog about islands and react, project overview, front and back end -->
+	<!-- have blogPost get passed written date!! that will be a good thing to format by -->
+	<ul>
+		{
+			allPosts
+				.slice(-3)
+				.map((post) => (
+					<BlogPost
+						url={`/posts/${post.slug}`}
+						title={post.data.title}
+					/>
+				))
+				.reverse()
+		}
+	</ul>
 	<h2>Project Overview</h2>
-	<!-- project overview -->
+	<!-- get a nice write up of islands and a thumbnail thingy -->
 
 	<h2>List of Things I'm Working On</h2>
 	<ul>
@@ -46,14 +66,18 @@ const headerID = "home-title";
 		</li>
 		<li>
 			<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set 2,
-			Challenge 16
+			Challenge 18
 		</li>
-		<li>A data analysis and visualization project</li>
+		<li>
+			A data analysis and visualization project using <a
+				href="https://opendata.cityofnewyork.us">NYC Open Data</a
+			>
+		</li>
 		<li>
 			Learning about web security on <a
 				href="https://portswigger.net/web-security/learning-paths"
 				>Port Swigger</a
-			>
+			> and <a href="https://ctf.hacker101.com/ctf">CTF challenges!</a>
 		</li>
 		<li>Getting better at blogging</li>
 	</ul>
