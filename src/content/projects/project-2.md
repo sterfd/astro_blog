@@ -1,11 +1,10 @@
 ---
-title: Islands, an implementation of Nurikabe
+title: bleh
 author: Stef
 description: a full stack implementation of nurikabe with React/Node
 pubDate: 2024-02-12
-image: url: ./islands.png
-        alt: "Islands gameplay"
-tags: ["react", "games", "node", "js", ""postgres"]
+image: "https://fakeimg.pl/640x360"
+tags: ["react", "games", "node", "js", "postgres"]
 ---
 
 [Islands](https://islands-94307.web.app)

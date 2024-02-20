@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import Card from "../components/Card.astro";
 // import Greeting from "../components/Greeting";
 const allPosts = await getCollection("posts");
 const pageTitle = "Home Page";
@@ -49,36 +50,51 @@ const headerID = "home-title";
 	<h2>Project Overview</h2>
 	<!-- get a nice write up of islands and a thumbnail thingy -->
 
-	<h2>List of Things I'm Working On</h2>
 	<ul>
-		<li>How to use Astro by building this website :P</li>
-		<li>A cute computer vision project</li>
 		<li>
-			Machine learning fundamentals with <a
-				href="https://karpathy.ai/zero-to-hero.html"
+			<Card
+				url="/projects/islands"
+				img="/assets/islands.png"
+				title="Islands"
+				footer="Tony Stark"
 			>
-				Karpathy's Neural Networks: Zero to Hero</a
-			> series
+				Lorem ipsum dolor sit amet.
+			</Card>
 		</li>
-		<li>
-			Learning about microservice architecture by building a video
-			streaming application
-		</li>
-		<li>
-			<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set 2,
-			Challenge 18
-		</li>
-		<li>
-			A data analysis and visualization project using <a
-				href="https://opendata.cityofnewyork.us">NYC Open Data</a
-			>
-		</li>
-		<li>
-			Learning about web security on <a
-				href="https://portswigger.net/web-security/learning-paths"
-				>Port Swigger</a
-			> and <a href="https://ctf.hacker101.com/ctf">CTF challenges!</a>
-		</li>
-		<li>Getting better at blogging</li>
+		<li></li>
+
+		<h2>List of Things I'm Working On</h2>
+		<ul>
+			<li>How to use Astro by building this website :P</li>
+			<li>A cute computer vision project</li>
+			<li>
+				Machine learning fundamentals with <a
+					href="https://karpathy.ai/zero-to-hero.html"
+				>
+					Karpathy's Neural Networks: Zero to Hero</a
+				> series
+			</li>
+			<li>
+				Learning about microservice architecture by building a video
+				streaming application
+			</li>
+			<li>
+				<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set
+				2, Challenge 18
+			</li>
+			<li>
+				A data analysis and visualization project using <a
+					href="https://opendata.cityofnewyork.us">NYC Open Data</a
+				>
+			</li>
+			<li>
+				Learning about web security on <a
+					href="https://portswigger.net/web-security/learning-paths"
+					>Port Swigger</a
+				> and <a href="https://ctf.hacker101.com/ctf">CTF challenges!</a
+				>
+			</li>
+			<li>Getting better at blogging</li>
+		</ul>
 	</ul>
 </BaseLayout>

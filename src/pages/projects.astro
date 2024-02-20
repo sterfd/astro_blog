@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const allProjects = await getCollection("projects");
+
+const pageTitle = "Projects";
+const headerID = "projects-title";
+---
+
+<BaseLayout pageTitle={pageTitle} header={headerID}>
+    <p>hello here are some projects</p>
+
+    <ul>
+        {
+            allProjects
+                // .slice(-3)
+                .map((project) => (
+                    <BlogPost
+                        url={`/projects/${project.slug}`}
+                        title={project.data.title}
+                    />
+                ))
+                .reverse()
+        }
+    </ul>
+</BaseLayout>
