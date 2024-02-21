@@ -1,8 +1,20 @@
 ---
-title: Why is using Zoom so hard am I a boomer?
+title: A Cryptopals translation guide
 author: Stef
 pubDate: 2022-08-01
-description: "After learning some Astro, I couldn't stop!"
-tags: ["astro", "blogging", "learning in public", "successes"]
+description: "writing about my experience with cryptopals"
+tags: ["cryptography", "learning", "python"]
 ---
-After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!
+Some notes for myself regarding cryptopals
+
+I want to have a guide for the different challenges that provides more context for people going through it for the first time
+
+It would tell the reader without giving away code:
+- a more readable set of instructions for what the level is supposed to do
+- what information does the attacker know? often we play both creator and attacker and its hard to figure out what information we are supposed to have. this sometimes translates over to encryption/decryption. What information is saved/passed around and what is assumed by attacker, what information do they gain with these attacks?
+- maybe sets of tests to try their code on?
+- maybe some diagrams on how these encryptions work? the visuals help A LOT
+
+
+
+- cryptopals 19 20 - nonce should only be used once - otherwise it breaks into repeating XOR key

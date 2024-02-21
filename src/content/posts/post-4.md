@@ -3,7 +3,7 @@ title: To Do list for this website
 author: Stef
 description: "This post will show up on its own!"
 pubDate: 2022-08-08
-tags: ["astro", "successes"]
+tags: ["todo"]
 ---
 1) write actual blog posts lmao
 2) fix the animations - this is really gaudy - either remove them completely or find nicer ones
