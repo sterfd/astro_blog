@@ -40,7 +40,7 @@
     }
 
     :global(.dark) .moon {
-        fill: #f3e7a9;
+        fill: #fcdf9d;
     }
 </style>
 
@@ -85,6 +85,6 @@
     document.addEventListener("astro:after-swap", () => {
         localStorage.theme === "dark"
             ? document.documentElement.classList.add("dark")
-            : document.documentElement.classList.add("light");
+            : document.documentElement.classList.remove("dark");
     });
 </script>

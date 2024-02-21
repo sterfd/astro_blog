@@ -3,7 +3,6 @@ interface Props {
     url?: string;
     img?: string;
     title?: string;
-    footer: string;
     children?: string | HTMLElement | HTMLElement[];
 }
 
@@ -11,7 +10,6 @@ const {
     url = "#",
     img = "https://fakeimg.pl/640x360",
     title = "Default title",
-    footer = "Your name",
 } = Astro.props;
 ---
 
@@ -26,28 +24,45 @@ const {
         <p>
             <slot>Default description.</slot>
         </p>
-        <small>
-            {footer}
-        </small>
     </div>
 </div>
 
 <style is:global>
+    ul#cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+
+        @media (min-width: 300px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+        }
+
+        @media (min-width: 950px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
     .card {
         display: flex;
         flex-direction: column;
-        border: 1px solid #2b3132;
-        border-radius: 0.5rem;
-        max-width: 60ch;
-        min-height: 100%;
+        background-color: #fdfcf9;
+        border-radius: 5px;
+        border: solid #d5dfd8 2px;
+        height: 300px;
+        width: 350px;
         position: relative;
         overflow: hidden;
-        transition: box-shadow 0.15s ease-in-out;
+        transition: transform 0.3s ease;
+    }
+
+    .dark .card {
+        border: solid #476780 2px;
+        background-color: #3a4e66;
     }
 
     .card:hover,
     .card:focus-within {
-        box-shadow: 0 0 0 0.25rem;
+        transform: scale(1.03);
     }
 
     .card:focus-within a:focus {
@@ -57,7 +72,7 @@ const {
     }
 
     .card__image {
-        height: 10rem;
+        height: 200px;
     }
 
     .card__image img {
@@ -71,6 +86,18 @@ const {
         flex-direction: column;
         flex-grow: 1;
         padding: 1rem;
+    }
+
+    .card__content h3 {
+        margin-top: 0.5rem;
+        margin-bottom: 0rem; /* Reduce the margin bottom */
+    }
+
+    .card__content p {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 0;
+        margin-bottom: 0; /* Remove the default margin */
     }
 
     .card__content a {
@@ -89,6 +116,6 @@ const {
 
     .card__content:last-child {
         margin-top: auto;
-        padding-top: 2rem;
+        padding-top: 0rem;
     }
 </style>

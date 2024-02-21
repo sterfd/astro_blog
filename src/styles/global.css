@@ -1,5 +1,5 @@
 html {
-    background-color: #F7F4EB;
+    background-color: #E9EEEB;
     font-family: sans-serif;
     color: #383B36;
     height: 100%;
@@ -16,10 +16,12 @@ html.dark {
     color: #EBEFEF;
 }
 
+
+
 body {
     margin: 0 auto;
     width: 100%;
-    max-width: 85ch;
+    max-width: 800px;
     padding: 1rem;
     line-height: 1.5;
     display: flex;
@@ -30,6 +32,11 @@ main {
     flex-grow: 1;
 }
 
+#content {
+    padding: 10px;
+    padding-top: 0px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -37,6 +44,7 @@ main {
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+    margin-bottom: 0px;
 }
 
 a {
@@ -91,11 +99,12 @@ a {
     font-size: 1.2rem;
     font-weight: bold;
     color: #383B36;
-    border-radius: 2px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) 0.3s;
     /* Enlarge the text by 1.2x when hovered */
 }
 

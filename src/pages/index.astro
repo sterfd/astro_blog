@@ -16,7 +16,12 @@ const headerID = "home-title";
 	p {
 		/* text-align: justify; */
 	}
+
+	ul#cards {
+		list-style-type: none;
+	}
 </style>
+
 <BaseLayout pageTitle={pageTitle} header={headerID}>
 	<p>
 		Hello! My name is Stephanie Nakamata and I'm an aspiring software
@@ -27,7 +32,7 @@ const headerID = "home-title";
 	</p>
 	<p>
 		Here, you'll find a collection of things resulting from coding:
-		thoughts, projects, details of my transformation?!
+		thoughts, projects, details of my evolution?!
 	</p>
 
 	<h2>Latest Blog Posts</h2>
@@ -47,54 +52,58 @@ const headerID = "home-title";
 				.reverse()
 		}
 	</ul>
-	<h2>Project Overview</h2>
-	<!-- get a nice write up of islands and a thumbnail thingy -->
-
-	<ul>
+	<h2>Recent Projects</h2>
+	<ul id="cards">
 		<li>
 			<Card
 				url="/projects/islands"
-				img="/assets/islands.png"
+				img="/assets/islands3.png"
 				title="Islands"
-				footer="Tony Stark"
 			>
-				Lorem ipsum dolor sit amet.
+				A full-stack implementation of Nurikabe built with React and
+				Node!
 			</Card>
 		</li>
-		<li></li>
-
-		<h2>List of Things I'm Working On</h2>
-		<ul>
-			<li>How to use Astro by building this website :P</li>
-			<li>A cute computer vision project</li>
-			<li>
-				Machine learning fundamentals with <a
-					href="https://karpathy.ai/zero-to-hero.html"
-				>
-					Karpathy's Neural Networks: Zero to Hero</a
-				> series
-			</li>
-			<li>
-				Learning about microservice architecture by building a video
-				streaming application
-			</li>
-			<li>
-				<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set
-				2, Challenge 18
-			</li>
-			<li>
-				A data analysis and visualization project using <a
-					href="https://opendata.cityofnewyork.us">NYC Open Data</a
-				>
-			</li>
-			<li>
-				Learning about web security on <a
-					href="https://portswigger.net/web-security/learning-paths"
-					>Port Swigger</a
-				> and <a href="https://ctf.hacker101.com/ctf">CTF challenges!</a
-				>
-			</li>
-			<li>Getting better at blogging</li>
-		</ul>
+		<li>
+			<Card
+				url="/projects/blog"
+				img="/assets/blog2.png"
+				title="Personal Website"
+			>
+				You're here right now :) This was built with Astro.
+			</Card>
+		</li>
+	</ul>
+	<h2>List of Things I'm Working On</h2>
+	<ul>
+		<li>How to use Astro by building this website :P</li>
+		<li>A cute computer vision project</li>
+		<li>
+			Machine learning fundamentals with <a
+				href="https://karpathy.ai/zero-to-hero.html"
+			>
+				Karpathy's Neural Networks: Zero to Hero</a
+			> series
+		</li>
+		<li>
+			Learning about microservice architecture by building a video
+			streaming application
+		</li>
+		<li>
+			<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set 2,
+			Challenge 18
+		</li>
+		<li>
+			A data analysis and visualization project using <a
+				href="https://opendata.cityofnewyork.us">NYC Open Data</a
+			>
+		</li>
+		<li>
+			Learning about web security on <a
+				href="https://portswigger.net/web-security/learning-paths"
+				>Port Swigger</a
+			> and <a href="https://ctf.hacker101.com/ctf">CTF challenges!</a>
+		</li>
+		<li>Getting better at blogging</li>
 	</ul>
 </BaseLayout>

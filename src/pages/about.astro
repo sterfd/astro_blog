@@ -6,41 +6,54 @@ import type {
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 
-const identity = {
-    firstName: "Stef",
-    country: "Canada",
-    occupation: "Developer",
-    hobbies: ["volleyball", "climbing", "cycling"],
-};
-
-const skills = ["Python", "React", "Node", "HTML/CSS"];
-
 const headerID = "about-title";
 ---
 
-<BaseLayout pageTitle={pageTitle} header={headerID}>
-    <p>
-        My name is Stephanie! I used to be a scientist, but I've fallen in love
-        with programming, and trying to learn as much as I can about it! I'm a
-        pretty strong Python programmer, and I enjoy making things (web
-        development), playing with things (datasets, CV), and breaking things
-        (cryptography, CTF).
-    </p>
-    <p>
-        The layout of this website will probably be updated pretty frequently
-        since I get pretty obsessed with shiny things like this and playing
-        around with them. Hopefully that's not the case so I can write and
-        reflect more about the things I'm learning.
-    </p>
-    <p>
-        This is also a reminder to myself to put up some tutorials for my future
-        self. Sometimes I learn how to use a nifty tool, and I'll forget
-        everything about it, including its name, the next time I need it ;A;
-    </p>
+<style>
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    #me-image-container {
+        flex: 1;
+    }
 
-    <p>
-        I hope I can inject my personality into this and it'll evolve as a space
-        where I can put some cool links, thoughts, and experiments down. So it's
-        not just a <i>please look at how skilled and employable i am</i> sorta thing...
-    </p>
+    #stef-pic {
+        width: 100%;
+    }
+
+    #write-up-container {
+        flex: 1;
+        padding-right: 20px;
+        text-align: justify;
+    }
+</style>
+<BaseLayout pageTitle={pageTitle} header={headerID}>
+    <div class="content-wrapper">
+        <div id="write-up-container">
+            <p>
+                My name is Stephanie! I used to be a scientist, but I've fallen
+                in love with programming, and trying to learn as much as I can
+                about it! I enjoy making things (web development), playing with
+                things (datasets, CV), and breaking things (cryptography, CTF).
+            </p>
+            <p>
+                This is a reminder to myself to put up some tutorials for my
+                future self. Sometimes I learn how to use a nifty tool or make a
+                cool thing, and I'll forget everything about it the next time I
+                need it ;A;
+            </p>
+
+            <p>
+                Outside of coding, I love playing and watching a bunch of
+                sports: volleyball, climbing, cycling. Shoot me an email to
+                connect!
+            </p>
+        </div>
+
+        <div id="me-image-container">
+            <img id="stef-pic" src="/assets/me.JPG" />
+        </div>
+    </div>
 </BaseLayout>
