@@ -86,8 +86,9 @@ a {
 .nav-links {
     width: 100%;
     top: 5rem;
-    left: 48px;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
 }
 
@@ -160,7 +161,6 @@ a {
 
 @media screen and (min-width: 636px) {
     .nav-links {
-        margin-left: 5em;
         display: block;
         position: static;
         width: auto;

@@ -12,11 +12,11 @@ const headerID = "blog-title";
     <ul>
         {
             allPosts
-                // .slice(-3)
                 .map((post) => (
                     <BlogPost
                         url={`/posts/${post.slug}`}
                         title={post.data.title}
+                        date={post.data.pubDate}
                     />
                 ))
                 .reverse()
