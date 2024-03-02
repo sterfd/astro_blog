@@ -221,3 +221,23 @@ a {
         url('../fonts/compagnon/webfonts/Compagnon-Roman.woff') format('woff'),
         url('../fonts/compagnon/webfonts/Compagnon-Roman.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: 'alba-super';
+    src: url('../fonts/alba.super.ttf');
+}
+
+@font-face {
+    font-family: 'alba';
+    src: url('../fonts/alba.regular.ttf');
+}
+
+@font-face {
+    font-family: 'antipasto-bold';
+    src: url('../fonts/antipasto.bold.ttf');
+}
+
+@font-face {
+    font-family: 'antipasto';
+    src: url('../fonts/antipasto.medium.ttf');
+}
