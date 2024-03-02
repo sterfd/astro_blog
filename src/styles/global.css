@@ -177,3 +177,47 @@ a {
     }
 
 }
+
+
+/* FONTS */
+@font-face {
+    font-family: 'Compagnon-Bold';
+    src: url('../fonts/compagnon/Compagnon-Bold.otf') format('opentype');
+    src: url('../fonts/compagnon/webfonts/Compagnon-Bold.eot') format('embedded-opentype'),
+        url('../fonts/compagnon/webfonts/Compagnon-Bold.woff') format('woff'),
+        url('../fonts/compagnon/webfonts/Compagnon-Bold.woff2') format('woff2');
+    /* font-weight: bold; */
+}
+
+@font-face {
+    font-family: 'Compagnon-Light';
+    src: url('../fonts/compagnon/Compagnon-Light.otf') format('opentype');
+    src: url('../fonts/compagnon/webfonts/Compagnon-Light.eot') format('embedded-opentype'),
+        url('../fonts/compagnon/webfonts/Compagnon-Light.woff') format('woff'),
+        url('../fonts/compagnon/webfonts/Compagnon-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Compagnon-LightItalic';
+    src: url('../fonts/compagnon/Compagnon-LightItalic.otf') format('opentype');
+    src: url('../fonts/compagnon/webfonts/Compagnon-LightItalic.eot') format('embedded-opentype'),
+        url('../fonts/compagnon/webfonts/Compagnon-LightItalic.woff') format('woff'),
+        url('../fonts/compagnon/webfonts/Compagnon-LightItalic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Compagnon-Medium';
+    src: url('../fonts/compagnon/Compagnon-Medium.otf') format('opentype');
+    src: url('../fonts/compagnon/webfonts/Compagnon-Medium.eot') format('embedded-opentype'),
+        url('../fonts/compagnon/webfonts/Compagnon-Medium.woff') format('woff'),
+        url('../fonts/compagnon/webfonts/Compagnon-Medium.woff2') format('woff2');
+    font-weight: medium;
+}
+
+@font-face {
+    font-family: 'Compagnon-Roman';
+    src: url('../fonts/compagnon/Compagnon-Roman.otf') format('opentype');
+    src: url('../fonts/compagnon/webfonts/Compagnon-Roman.eot') format('embedded-opentype'),
+        url('../fonts/compagnon/webfonts/Compagnon-Roman.woff') format('woff'),
+        url('../fonts/compagnon/webfonts/Compagnon-Roman.woff2') format('woff2');
+}
