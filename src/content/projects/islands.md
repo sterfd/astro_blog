@@ -3,7 +3,7 @@ title: Islands, an implementation of Nurikabe
 author: Stef
 description: a full stack implementation of nurikabe with React/Node
 pubDate: 2024-02-12
-image: ./islands.png
+image: ./islands3.png
 tags: ["react", "games", "node", "javascript", "postgres"]
 ---
 

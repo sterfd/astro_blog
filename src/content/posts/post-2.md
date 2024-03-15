@@ -1,9 +1,9 @@
 ---
 title: A Cryptopals translation guide
 author: Stef
-pubDate: 2022-08-01
+pubDate: 2024-02-20
 description: "writing about my experience with cryptopals"
-tags: ["cryptography", "learning", "python"]
+tags: ["breaking things"]
 ---
 Some notes for myself regarding cryptopals
 

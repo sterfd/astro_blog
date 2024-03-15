@@ -23,8 +23,20 @@ const projectsCollection = defineCollection({
         tags: z.array(z.string())
     })
 });
+
+const thoughtsCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        pubDate: z.date(),
+        author: z.string(),
+        tags: z.array(z.string())
+    })
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
     posts: postsCollection,
     projects: projectsCollection,
+    thoughts: thoughtsCollection,
 };

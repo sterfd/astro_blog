@@ -6,12 +6,28 @@ import ThemeIcon from "../components/ThemeIcon.astro";
 
 <style>
     #name-logo {
-        /* font-size: 4rem; */
+        font-size: 3rem;
+        padding: 10px;
+    }
+
+    img {
+        padding-top: 5px;
+        padding-left: 10px;
+        height: 3rem;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
 <header>
     <div class="header-content">
-        <h1 id="name-logo">Stephanie Nakamata</h1>
+        <div class="title">
+            <h1 id="name-logo">Stephanie Nakamata</h1>
+            <img src="/assets/bmo2.png" />
+        </div>
         <nav>
             <Hamburger />
             <ThemeIcon />

@@ -34,15 +34,16 @@ const {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2rem;
+        justify-items: center;
 
-        @media (min-width: 300px) {
+        @media (min-width: 850px) {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 2rem;
         }
 
-        @media (min-width: 950px) {
+        /* @media (min-width: 950px) {
             grid-template-columns: repeat(3, 1fr);
-        }
+        } */
     }
 
     .card {
@@ -149,8 +150,9 @@ const {
 
     .card__overlay p {
         /* color: #eeece3; */
-        /* text-align: center; */
+        text-align: center;
         padding: 0 20px;
+        padding-top: 30px;
         margin: 0;
     }
 </style>

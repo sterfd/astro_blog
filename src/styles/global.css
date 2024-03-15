@@ -43,7 +43,7 @@ main {
 
 h1 {
     margin: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 0px;
 }
 
@@ -127,33 +127,32 @@ a {
     color: #EE9BB5;
 }
 
-#blog-button:hover,
-#blog-button:focus {
+#projects-button:hover,
+#projects-button:focus {
     background-color: #EFB656;
 }
 
-#blog-title {
+#projects-title {
     color: #EFB656;
 }
 
-#tags-button:hover,
-#tags-button:focus {
+#blog-button:hover,
+#blog-button:focus {
     background-color: #B6D1CD;
 }
 
-#tags-title {
+#blog-title {
     color: #B6D1CD;
 }
 
-#projects-button:hover,
-#projects-button:focus {
+#thoughts-button:hover,
+#thoughts-button:focus {
     background-color: #DC766C;
 }
 
-#projects-title {
+#thoughts-title {
     color: #DC766C;
 }
-
 
 .expanded {
     display: unset;

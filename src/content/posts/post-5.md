@@ -1,9 +1,9 @@
 ---
 title: Scanning Website Directories with dirb
 author: Stef
-description: "Using dirb in CTFs"
-pubDate: 2024-02-12
-tags: ["web security"]
+description: using dirb and then writing my own python script for these brute force attacks
+pubDate: 2024-03-04
+tags: ["breaking things"]
 ---
 During one of the early CTF meetings, going through an easy Hacker101 challenge, we realized trying certain common URL routes would lead to new pages - how exciting - we felt like h@ckers! It's a little unrealistic to just guess these one by one, so I found a new toy: [dirb](https://www.kali.org/tools/dirb).
 

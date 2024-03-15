@@ -1,17 +1,18 @@
 ---
-title: To Do list for this website
+title: Making of Islands
 author: Stef
-description: "This post will show up on its own!"
-pubDate: 2022-08-08
-tags: ["todo"]
+description: documentation of the long process of making my first full-stack (and react!) app
+pubDate: 2024-03-01
+tags: ["making things"]
 ---
-1) write actual blog posts lmao
-2) fix the animations - this is really gaudy - either remove them completely or find nicer ones
-3) figure out if this layout is what i want in the end. maybe a sidebar navigation is nicer
-4) project tiles in the project overview 
-5) project layout template
-6) about page refinement... maybe take a professional-ish photo...
-7) get links in blog posts to have different styles
+
+1) game code from tictactoe - static json game
+1) game menu
+1) scraping games from websites and popping them into sqlite
+1) understanding servers, apis
+1) auth, firebase
+1) hosting
+1) being too lazy to adapt the game for mobile
 
 
 

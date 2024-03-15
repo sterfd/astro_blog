@@ -4,42 +4,31 @@ import { fade } from "astro:transitions";
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}> 
-    <p transition:animate={fade({ duration: "0.5s" })}>
-        Writen by <a href="/about/">{frontmatter.author}</a> on {
-            frontmatter.pubDate.toString().slice(0, 10)
-        }
-    </p>
+<BaseLayout pageTitle={frontmatter.title}>
+    <!-- <p transition:animate={fade({ duration: "0.5s" })}> -->
+    Writen by <a href="/about/">{frontmatter.author}</a> on {
+        frontmatter.pubDate.toString().slice(0, 10)
+    }
     <div class="tags">
         <p>Tags:</p>
-        {
-            frontmatter.tags.map((tag) => (
-                <p class="tag">
-                    <a href={`/tags/${tag}`}>{tag}</a>
-                </p>
-            ))
-        }
+        {frontmatter.tags.map((tag) => <p class="tag">{tag}</p>)}
     </div>
 
     <slot />
 </BaseLayout>
 
 <style>
-    a {
-        color: red;
-    }
-
     .tags {
         display: flex;
         flex-wrap: wrap;
     }
 
     .tag {
-        margin: 0.25em;
-        border: dotted 1px #a1a1a1;
-        border-radius: 0.5em;
-        padding: 0.5em 1em;
-        font-size: 1.15em;
-        background-color: #f8fcfd;
+        /* margin: 0.25em; */
+        /* border: dotted 1px #a1a1a1;
+        border-radius: 0.5em; */
+        padding-left: 0.5em;
+        /* font-size: 1.15em; */
+        /* background-color: #f8fcfd; */
     }
 </style>

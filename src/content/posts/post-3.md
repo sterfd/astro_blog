@@ -1,10 +1,11 @@
 ---
-title: Markdown Astro Links
+title: Building this site
 author: Stef
-description: "I had some challenges, but asking in the community really helped!"
-pubDate: 2022-07-15
-tags: ["astro", "learning in public", "setbacks", "community"]
+description: started from the bottom now we're here
+pubDate: 2024-02-25
+tags: ["making things"]
 ---
+
 Here's a cheatsheet for [markdown](https://www.markdownguide.org/cheat-sheet/)
 
 This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.
