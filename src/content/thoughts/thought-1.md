@@ -19,19 +19,25 @@ Since there's no publicly available datasets for laundry tag icons, I went to th
 - icon transformations and augmentation
 
 ### File management
-- /img_test.py - display an image with CV2 with bounding boxes
+- /img_test.py - display an image with CV2 with bounding boxes from .xml
 #### /dataset
 - There are original /images (111 images, about 2-3 MB each)
 - Also /aug_images (~50 kB) which are resized down
 - I seemed to have also defined BB coordinates for tags (46) for some images in corresponding, individual .xml files in /annotations/tags... don't remember what program I used for that. also have BBs for icons (36) in .xml files in /annotions/icons
 - dataset.ipynb - all the image/bb augmentation and file processing functions here
+    - load all images as np arrays and put in array
+    - compiles all individual .xml files to a .csv
+    - resizes images and associated BBs, maintaining aspect ratio/rotation using imgaug, saves them all 
+    - displays the resized images/BBs
 - [ ] *find out the standard for dataset images/coords/labels in peoples workflows*
 - [ ] *find out how the heck i got these BBs*
 
 #### /icon-bb
-- seems like yolo needs all labels to be in txt files (xml_to_txt.py) ? folder of images and labels 
-- model trained with 200 epochs on 36 images (train.ipynb)
-- 
+- tried a couple models - pretrained VGG16, weights from imagenet, train with 3 hidden relu layers and sigmoid output 
+- yolo - predict.ipynb - needs all labels to be in txt files (xml_to_txt.py) ? folder of images and labels 
+    - training - 200 epochs on 36 images (train.ipynb), 1 class = icon lol
+    - prediction - I remember this was pretty good, unless the tag has a bunch of korean letters
+        - go through all images in dataset, prediction on BB coord and save image from those coords to new files
 
 #### /icon-class
 
