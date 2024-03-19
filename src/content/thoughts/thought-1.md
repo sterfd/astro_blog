@@ -38,22 +38,35 @@ Since there's no publicly available datasets for laundry tag icons, I went to th
     - training - 200 epochs on 36 images (train.ipynb), 1 class = icon lol
     - prediction - I remember this was pretty good, unless the tag has a bunch of korean letters
         - go through all images in dataset, prediction on BB coord and save image from those coords to new files
+- [ ] *find out what is a model that predicts BB coords? conv -> sigmoid? since coords are 0-1*
+- [ ] **
 
 #### /icon-class
-
+- /image and /label where train and predict are working on
+- csv_to_txt.py - convert icon_labels.csv to individual .txt files with "label_int, 0.5 0.5 1.0 1.0"
+    - yolo model for classification - .txt labels for each image file - icon class, followed by 4 numbers (0.5 0.5 1.0 1.0).... what are these
+- icon_labels.csv - image filenames and classification
+- config.yaml - with different label classfiications
+- /icon_export - different subset of icon images than /images
+- /runs and /test_predictions
+- train1.ipynb - 10 epochs of training, batches of 16 - not sure if taken pretrained model from BB
+- [ ] *what should the output/labels look like? what are the 5 numbers*
+<!-- 
 ### BB tags
 - dataset.ipynb - 
 
 
-### BB icons 
+### BB icons  -->
 
 
-### Labelling icons T_T
+<!-- ### Labelling icons T_T -->
 
-
+## TO DO
 ### Transformation and Augmentation
-
+- do it all - rotations, stretches, color inversion, masks - wait on the orig or icons
+- probably keep all the channels in images
+- what size should the icons be?
 
 ## Training the Model
-
+- find out from isaac or regis! 
 
