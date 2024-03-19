@@ -62,6 +62,9 @@ Since there's no publicly available datasets for laundry tag icons, I went to th
 <!-- ### Labelling icons T_T -->
 
 ## TO DO
+- 
+
+
 ### Transformation and Augmentation
 - do it all - rotations, stretches, color inversion, masks - wait on the orig or icons
 - probably keep all the channels in images
