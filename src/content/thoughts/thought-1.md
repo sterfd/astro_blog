@@ -29,7 +29,7 @@ Since there's no publicly available datasets for laundry tag icons, I went to th
     - compiles all individual .xml files to a .csv
     - resizes images and associated BBs, maintaining aspect ratio/rotation using imgaug, saves them all 
     - displays the resized images/BBs
-- [ ] *find out the standard for dataset images/coords/labels in peoples workflows*
+- [x] *find out the standard for dataset images/coords/labels in peoples workflows*
 - [ ] *find out how the heck i got these BBs*
 
 #### /icon-bb
@@ -38,8 +38,7 @@ Since there's no publicly available datasets for laundry tag icons, I went to th
     - training - 200 epochs on 36 images (train.ipynb), 1 class = icon lol
     - prediction - I remember this was pretty good, unless the tag has a bunch of korean letters
         - go through all images in dataset, prediction on BB coord and save image from those coords to new files
-- [ ] *find out what is a model that predicts BB coords? conv -> sigmoid? since coords are 0-1*
-- [ ] **
+- [ ] *find out what is a model that predicts BB coords? what type of regression - conv -> sigmoid? since coords are 0-1*
 
 #### /icon-class
 - /image and /label where train and predict are working on
@@ -62,7 +61,16 @@ Since there's no publicly available datasets for laundry tag icons, I went to th
 <!-- ### Labelling icons T_T -->
 
 ## TO DO
-- 
+- make model for BB icon prediction 
+    - [x] find how i got the BBs in the first place...
+    - [x] define a std size for the icon output in the future - keep square shape
+    - [x] find a way to keep track of the image files, which ones have been labelled manually, predictions made, icon file names as a result
+    - [x] process the annotation coordinates and ...
+    - [ ] prepare dataset - do some scaling on training data
+    - [ ] find the model architecture
+    - [ ] train the model
+    - [ ] have some way to evaluate the models performance
+
 
 
 ### Transformation and Augmentation
