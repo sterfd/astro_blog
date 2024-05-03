@@ -1,5 +1,5 @@
 ---
-title: Scanning Website Directories with dirb
+title: Scanning Website Directories
 author: Stef
 description: using dirb and then writing my own python script for these brute force attacks
 pubDate: 2024-03-04
@@ -11,5 +11,4 @@ dirb is a tool used to fuzz website directories. You supply it a list of routes 
 
 > <code>dirb https://breakintothiswebsite.com /path/to/wordlist.txt</code>
 
-If you don't want dirb to recursively go through all subdirectories it finds, add the <code>-r</code> flag.
-
+The meeting after, we wanted to write our own Python script to do this fuzzing! 

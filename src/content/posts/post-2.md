@@ -16,5 +16,3 @@ It would tell the reader without giving away code:
 - maybe some diagrams on how these encryptions work? the visuals help A LOT
 
 
-
-- cryptopals 19 20 - nonce should only be used once - otherwise it breaks into repeating XOR key
