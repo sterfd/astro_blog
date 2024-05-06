@@ -9,10 +9,10 @@ const { frontmatter } = Astro.props;
     Writen by <a href="/about/">{frontmatter.author}</a> on {
         frontmatter.pubDate.toString().slice(0, 10)
     }
-    <div class="tags">
+    <!-- <div class="tags">
         <p>Tags:</p>
         {frontmatter.tags.map((tag) => <p class="tag">{tag}</p>)}
-    </div>
+    </div> -->
 
     <slot />
 </BaseLayout>

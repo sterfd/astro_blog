@@ -12,14 +12,9 @@ const headerID = "home-title";
 	a {
 		text-decoration: underline;
 	}
-	p {
-		/* text-align: justify; */
-	}
-
 	ul#cards {
 		list-style-type: none;
 	}
-
 	h2 {
 		padding-top: 20px;
 	}
@@ -27,11 +22,11 @@ const headerID = "home-title";
 
 <BaseLayout pageTitle={pageTitle} header={headerID}>
 	<p>
-		Hello! My name is Stephanie Nakamata and I'm an aspiring software
+		Hello! My name is Stephanie Nakamata and I'm a software
 		developer. I'm currently at the <a href="https://www.recurse.com"
 			>Recurse Center</a
 		> for a 18 week batch, learning about backend systems, cryptography,
-		web security, ML, and more!
+		ML, web security, and more!
 	</p>
 	<p>
 		Here, you'll find a collection of things resulting from coding:
@@ -60,19 +55,11 @@ const headerID = "home-title";
 	<ul id="cards">
 		<li>
 			<Card
-				url="/projects/islands"
-				img="/assets/islands3.png"
-				title="Islands"
-				description="A full-stack implementation of Nurikabe built with React and Node!"
-			/>
-		</li>
-		<li>
-			<Card
-				url="/projects/blog"
-				img="/assets/blog5.png"
-				title="Personal Website"
-				description="You're here right now :) This was built with the Astro framework, HTML/CSS, and markdown."
-			/>
+				url="/projects/doorbot"
+				img="/assets/doorbot2.png"
+				title="RC Doorbot App"
+				description="A mobile app to get access to the RC hub built with React Native!"
+				/>
 		</li>
 		<li>
 			<Card
@@ -90,10 +77,17 @@ const headerID = "home-title";
 				description="A distributed backend application on the cloud for video streaming! Deployed on Azure Kubernetes Services, and built with Terraform, Docker, mongoDB, and more..."
 			/>
 		</li>
+		<li>
+			<Card
+				url="/projects/islands"
+				img="/assets/islands3.png"
+				title="Islands"
+				description="A full-stack implementation of Nurikabe built with React and Node!"
+			/>
+		</li>
 	</ul>
 	<h2>List of Things I'm Working On</h2>
 	<ul>
-		<li>A mobile application and updates to the Recurse Center doorbot server for improved alumni access to the hub</li>
 		<li>A pairing bot on the Zulip platform to bring people who want to get BOGO lunch deals together</li>
 		<li>A cute computer vision project</li>
 		<li>
@@ -102,10 +96,6 @@ const headerID = "home-title";
 			>
 				Karpathy's Neural Networks: Zero to Hero</a
 			> series and <a href="https://www.arena.education">AI safety</a>
-		</li>
-		<li>
-			Learning about microservice architecture by building a video
-			streaming application
 		</li>
 		<li>
 			<a href="https://cryptopals.com">Cryptopals!</a> Currently on Set 5,

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from "../components/BlogPost.astro";
+import Card from "../components/Card.astro";
 const allProjects = await getCollection("projects");
 
 const pageTitle = "Projects";
@@ -16,8 +16,50 @@ const headerID = "projects-title";
 
 <BaseLayout pageTitle={pageTitle} header={headerID}>
     <p>uhhh hello here are some projects</p>
+    <ul id="cards">
+        <li>
+            <Card
+                url="/projects/doorbot"
+                img="/assets/doorbot2.png"
+                title="RC Doorbot App"
+                description="A mobile app to get access to the RC hub built with React Native!"
+                />
+        </li>
+		<li>
+			<Card
+				url="/projects/islands"
+				img="/assets/islands3.png"
+				title="Islands"
+				description="A full-stack implementation of Nurikabe built with React and Node!"
+			/>
+		</li>
+		<li>
+			<Card
+				url="/projects/blog"
+				img="/assets/blog5.png"
+				title="Personal Website"
+				description="You're here right now :) This was built with the Astro framework, HTML/CSS, and markdown."
+			/>
+		</li>
+		<li>
+			<Card
+				url="/projects/laundry"
+				img="/assets/laundry.png"
+				title="How to Wash your Clothes"
+				description="A program that classifies laundry tag icons to give the user readable instructions on how to care for their clothes. The computer vision model was trained on dataset using PyTorch. Dataset handcrafted and processed by me :)"
+			/>
+		</li>
+		<li>
+			<Card
+				url="/projects/microserv"
+				img="/assets/youflix.png"
+				title="YouFlix"
+				description="A distributed backend application on the cloud for video streaming! Deployed on Azure Kubernetes Services, and built with Terraform, Docker, mongoDB, and more..."
+			/>
+		</li>
+	</ul>
 
-    <ul>
+    <!-- <ul>
         {
             allProjects
                 // .slice(-3)
@@ -29,5 +71,5 @@ const headerID = "projects-title";
                 ))
                 .reverse()
         }
-    </ul>
+    </ul> -->
 </BaseLayout>
