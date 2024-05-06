@@ -15,5 +15,19 @@ const { Content } = await entry.render();
 ---
 
 <MarkdownPostLayout frontmatter={entry.data}>
-    <Content />
+    <Content class="hello"/>
 </MarkdownPostLayout>
+
+<style>
+
+    a {
+        text-decoration: underline;
+    }
+
+    MarkdownPostLayout :global(a) {
+        text-decoration: underline;
+        color: red
+    }
+    
+    
+</style>

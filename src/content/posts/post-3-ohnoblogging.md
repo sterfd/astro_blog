@@ -1,5 +1,5 @@
 ---
-title: The pressure to keep up
+title: Blogging pressure
 pubDate: 2024-05-06
 description: 'oh no oh no i didnt blog'
 author: Stef
