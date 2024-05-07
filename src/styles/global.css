@@ -49,7 +49,7 @@ h1 {
 
 a {
     color: #383B36;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .dark a {

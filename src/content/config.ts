@@ -12,6 +12,16 @@ const postsCollection = defineCollection({
     })
 });
 
+const draftssCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        pubDate: z.date(),
+        author: z.string(),
+        tags: z.array(z.string())
+    })
+});
+
 const projectsCollection = defineCollection({
     type: 'content',
     schema: z.object({

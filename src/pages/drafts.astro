@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+const allPosts = await getCollection("drafts");
+const pageTitle = "drafts";
+const headerID = "blog-title";
+---
+
+<BaseLayout pageTitle={pageTitle} header={headerID}>
+    <p>Draft List:</p>
+    <ul>
+        {
+            allPosts
+                .map((post) => (
+                    <BlogPost
+                        url={`/drafts/${post.slug}`}
+                        title={post.data.title}
+                        date={post.data.pubDate}
+                    />
+                ))
+                .reverse()
+        }
+    </ul>
+</BaseLayout>
