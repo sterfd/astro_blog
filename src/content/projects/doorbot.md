@@ -14,6 +14,6 @@ tags: ["flask", "react-native", "android", "ios"]
 
 
 
-The RC doorbot unlocks the RC space for active Recursers. I made updates to the web server so personal access tokens can be used for authentication along with OAuth. This allows for mobile apps and iOS shortcuts to connect to doorbot. I built a mobile app for Android using React Native, and a series of iOS shortcuts to connect to doorbot. 
+The RC doorbot unlocks the RC space for active Recursers. I made updates to the web server so personal access tokens can be used for authentication along with OAuth. This allows for mobile apps and iOS shortcuts to connect to doorbot. I built those series of iOS shortcuts and a mobile app for Android using React Native. 
 
 
